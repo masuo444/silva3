@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カードゲーム「SILVA」 | KUKU DAO</title>
+    <meta name="description" content="SILVAは心理戦と戦略が織りなす、KUKU DAOの革新的カードゲームです。シンプルなルールながら奥深い駆け引きが楽しめます。">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="SILVA, カードゲーム, 心理戦, KUKU DAO, 戦略ゲーム, ククノチ">
+    <meta name="author" content="KUKU DAO">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://silva.official.ec/">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="カードゲーム「SILVA」 | KUKU DAO">
+    <meta property="og:description" content="SILVAは心理戦と戦略が織りなす、KUKU DAOの革新的カードゲームです。シンプルなルールながら奥深い駆け引きが楽しめます。">
+    <meta property="og:image" content="images/silva-og-image.jpg">
+    <meta property="og:url" content="https://silva.official.ec/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="カードゲーム「SILVA」 | KUKU DAO">
+    <meta name="twitter:description" content="SILVAは心理戦と戦略が織りなす、KUKU DAOの革新的カードゲームです。">
+    <meta name="twitter:image" content="images/silva-og-image.jpg">
+    <meta name="twitter:creator" content="@masukei444">
+    <meta name="twitter:site" content="@masukei444">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "SILVA カードゲーム",
+        "description": "心理戦と戦略が織りなすKUKU DAOの革新的カードゲーム",
+        "brand": {
+            "@type": "Brand",
+            "name": "KUKU DAO"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "990",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "KUKU DAO"
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a class="skip-link screen-reader-text" href="#main">メインコンテンツにスキップ</a>
+    
+    
+    <!-- Header -->
+    <header class="site-header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="site-branding">
+                    <h1 class="site-title">
+                        <a href="#home" class="brand-link">
+                            <span class="brand-text">SILVA</span>
+                            <span class="brand-subtitle">CARD GAME</span>
+                        </a>
+                    </h1>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" data-section="about">
+                            <span class="nav-icon">🎮</span>
+                            <span class="nav-text">ゲームについて</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#cards" class="nav-link" data-section="cards">
+                            <span class="nav-icon">🃏</span>
+                            <span class="nav-text">カード一覧</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#rules" class="nav-link" data-section="rules">
+                            <span class="nav-icon">📋</span>
+                            <span class="nav-text">ルール</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#buy" class="nav-link" data-section="buy">
+                            <span class="nav-icon">🛒</span>
+                            <span class="nav-text">購入</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="テーマ切り替え">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="メニュー切り替え">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Progress Bar -->
+        <div class="scroll-progress">
+            <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main">
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="hero-particles" id="heroParticles"></div>
+                <div class="hero-gradient"></div>
+            </div>
+            
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-icon">⚡</span>
+                        <span class="badge-text">KUKU DAO Presents</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="title-main">SILVA</span>
+                        <span class="title-sub">カードゲーム</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        心理戦と戦略が織りなす、革新的カードゲーム。<br>
+                        <strong>シンプルなルールながら奥深い駆け引きが楽しめます。</strong>
+                    </p>
+                    
+                    
+                    <div class="hero-buttons">
+                        <a href="#buy" class="btn btn-primary btn-glow">
+                            <span class="btn-text">今すぐ購入</span>
+                            <span class="btn-price">¥1,500</span>
+                        </a>
+                        <a href="#rules" class="btn btn-secondary btn-outline">
+                            <span class="btn-icon">📋</span>
+                            <span class="btn-text">ルールを学ぶ</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="card-showcase">
+                        <div class="showcase-card card-featured single-card" data-tilt>
+                            <div class="card-glow"></div>
+                            <img src="images/back.png" alt="SILVA Card Back" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating Elements -->
+            <div class="floating-elements">
+                <div class="floating-card floating-1">🃏</div>
+                <div class="floating-card floating-2">⚡</div>
+                <div class="floating-card floating-3">🎯</div>
+                <div class="floating-card floating-4">🧠</div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span class="scroll-text">Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span class="badge-icon">🎮</span>
+                        <span class="badge-text">About Game</span>
+                    </div>
+                    <h2 class="section-title">SILVAで遊ぶ</h2>
+                    <p class="section-description">
+                        シンプルながら奥深い心理戦を楽しめる、革新的なカードゲーム
+                    </p>
+                </div>
+                
+                <div class="game-info-grid">
+                    <div class="game-info-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="info-icon">⏱️</div>
+                        <h3 class="info-title">プレイ時間</h3>
+                        <p class="info-value">2～10分</p>
+                        <p class="info-description">短時間で濃密な体験</p>
+                    </div>
+                    
+                    <div class="game-info-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="info-icon">👥</div>
+                        <h3 class="info-title">プレイヤー数</h3>
+                        <p class="info-value">2～4人</p>
+                        <p class="info-description">少人数で楽しめる</p>
+                    </div>
+                    
+                    <div class="game-info-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="info-icon">📦</div>
+                        <h3 class="info-title">セット内容</h3>
+                        <p class="info-value">20枚</p>
+                        <p class="info-description">ゲームカード18 + ルールカード2</p>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text" data-aos="fade-right">
+                        
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">🧠</div>
+                                <div class="feature-content">
+                                    <h4>心理戦</h4>
+                                    <p>相手の手札を推理し、騙し合いを楽しむ深い読み合い</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">⚡</div>
+                                <div class="feature-content">
+                                    <h4>素早いプレイ</h4>
+                                    <p>短時間で濃密なゲーム体験を味わえる</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">🎯</div>
+                                <div class="feature-content">
+                                    <h4>戦略性</h4>
+                                    <p>限られた情報から最適な判断を下す</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">🏆</div>
+                                <div class="feature-content">
+                                    <h4>再プレイ性</h4>
+                                    <p>何度遊んでも新しい発見がある</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <section id="cards" class="cards section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span class="badge-icon">🃏</span>
+                        <span class="badge-text">Card Collection</span>
+                    </div>
+                    <h2 class="section-title">カード一覧</h2>
+                    <p class="section-description">
+                        11種類のユニークなカードで繰り広げられる心理戦
+                    </p>
+                </div>
+                
+                
+                <div class="cards-grid" id="cardsGrid">
+                    <!-- カードがJavaScriptで動的に生成されます -->
+                </div>
+                
+                <div class="cards-cta">
+                    <p class="cta-text">すべてのカードを手に入れて、心理戦を制覇しよう！</p>
+                    <a href="#buy" class="btn btn-primary btn-large">
+                        <span class="btn-text">今すぐ購入</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card Modal -->
+        <div id="cardModal" class="modal">
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose" aria-label="閉じる">
+                    <span class="close-icon">×</span>
+                </button>
+                
+                <div class="modal-card-display">
+                    <div class="modal-card-image">
+                        <div class="card-3d-container">
+                            <img id="modalCardImage" src="" alt="カード画像" class="card-3d">
+                        </div>
+                    </div>
+                    
+                    <div class="modal-card-info">
+                        <div class="modal-header">
+                            <h3 id="modalCardName" class="modal-title"></h3>
+                            <div class="modal-level" id="modalCardLevel"></div>
+                        </div>
+                        
+                        <div class="modal-details">
+                            <div class="detail-item">
+                                <span class="detail-label">キャラクター</span>
+                                <span id="modalCharacterName" class="detail-value"></span>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <span class="detail-label">効果</span>
+                                <span id="modalEffect" class="detail-value"></span>
+                            </div>
+                            
+                            <div class="detail-item description">
+                                <span class="detail-label">説明</span>
+                                <p id="modalDescription" class="detail-description"></p>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-actions">
+                            <button class="btn btn-secondary" id="modalPrevCard">
+                                <span class="btn-icon">←</span>
+                                <span class="btn-text">前のカード</span>
+                            </button>
+                            <button class="btn btn-secondary" id="modalNextCard">
+                                <span class="btn-text">次のカード</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rules Section -->
+        <section id="rules" class="rules section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span class="badge-icon">📋</span>
+                        <span class="badge-text">Game Rules</span>
+                    </div>
+                    <h2 class="section-title">ゲームの進め方</h2>
+                    <p class="section-description">
+                        シンプルなルールで始める心理戦の世界
+                    </p>
+                </div>
+                
+                <div class="rules-timeline">
+                    <div class="rule-step" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-number">
+                            <span class="number">1</span>
+                            <div class="step-connector"></div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-icon">🎲</div>
+                            <h3 class="step-title">セットアップ</h3>
+                            <p class="step-description">
+                                <strong>幼きククノチ(0) 以外の17枚</strong>をよく混ぜ伏せて山札に。<br>
+                                <strong>幼きククノチを山札横に横向きで置き「再生札」</strong>に。<br>
+                                各プレイヤーは山札から1枚取り手札に。先手を決め、時計回りに進行。
+                            </p>
+                            <div class="step-tips">
+                                <div class="tip-item">
+                                    <span class="tip-icon">💡</span>
+                                    <span class="tip-text">カードをよくシャッフルして公平性を保ちましょう</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-step" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-number">
+                            <span class="number">2</span>
+                            <div class="step-connector"></div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-icon">🔄</div>
+                            <h3 class="step-title">手番の流れ</h3>
+                            <p class="step-description">
+                                ①<strong>山札の一番上を1枚引き、手札は2枚に。</strong><br>
+                                ②<strong>2枚から1枚選んで公開し、必ず効果を実行。</strong><br>
+                                ③そのカードは自分の捨て札として左→右に並べる。<br>
+                                ④効果処理後、手番終了。時計回りで次の人へ。
+                            </p>
+                            <div class="step-tips">
+                                <div class="tip-item">
+                                    <span class="tip-icon">⚠️</span>
+                                    <span class="tip-text">効果で相手に捨てさせられたカードは効果が発動しない</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-step" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-number">
+                            <span class="number">3</span>
+                            <div class="step-connector"></div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-icon">💀</div>
+                            <h3 class="step-title">脱落</h3>
+                            <p class="step-description">
+                                効果で脱落したプレイヤーは<strong>手札を公開して捨て札に追加。</strong>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-step" data-aos="fade-up" data-aos-delay="400">
+                        <div class="step-number">
+                            <span class="number">4</span>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-icon">🏆</div>
+                            <h3 class="step-title">勝利条件</h3>
+                            <p class="step-description">
+                                ゲームは以下のいずれかで終了：<br><br>
+                                <strong>①山札がなくなった</strong>→残存プレイヤーは手札公開し、数字が最も大きいカードの持ち主が勝利。同値は引き分け。<br><br>
+                                <strong>②最後の1人を残して他が全員脱落</strong>→生き残りの即勝利。<br><br>
+                                <strong>③全員同時脱落</strong>→引き分け。
+                            </p>
+                            <div class="step-tips">
+                                <div class="tip-item">
+                                    <span class="tip-icon">🧠</span>
+                                    <span class="tip-text">心理戦を制する者が真の勝者となります</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rules-cta">
+                    <div class="cta-content">
+                        <h3 class="cta-title">ルールを覚えたら、実際にプレイしてみましょう！</h3>
+                        <p class="cta-description">カードの効果を理解して、心理戦を楽しもう</p>
+                    </div>
+                    
+                    <!-- YouTube Video Embed -->
+                    <div class="video-container" style="margin: 2rem 0; max-width: 800px; margin-left: auto; margin-right: auto;">
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);">
+                            <iframe 
+                                src="https://www.youtube.com/embed/kCt9FI_0VRI?si=TeY-PELRHXpEp33T" 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="#cards" class="btn btn-primary">
+                            <span class="btn-text">カード効果を見る</span>
+                            <span class="btn-icon">🃏</span>
+                        </a>
+                        <a href="#buy" class="btn btn-secondary">
+                            <span class="btn-text">ゲームを購入</span>
+                            <span class="btn-icon">🛒</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Purchase Section -->
+        <section id="buy" class="purchase section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span class="badge-icon">🛒</span>
+                        <span class="badge-text">Get SILVA</span>
+                    </div>
+                    <h2 class="section-title">SILVAを購入</h2>
+                    <p class="section-description">
+                        今すぐ心理戦の世界に飛び込もう
+                    </p>
+                </div>
+                
+                <div class="purchase-container">
+                    <div class="purchase-option" data-aos="zoom-in">
+                        <div class="option-header">
+                            <div class="option-icon">📦</div>
+                            <h3 class="option-title">フィジカルゲーム</h3>
+                            <p class="option-subtitle">完全セット</p>
+                        </div>
+                        
+                        <div class="price-display">
+                            <span class="price-main">¥1,500</span>
+                            <span class="price-tax">（税込）</span>
+                        </div>
+                        
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">ゲームカード18枚 + ルールカード2枚</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">11種類のユニークなキャラクター</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">KUKU DAOオリジナルデザイン</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">高品質カード印刷</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">すぐに遊べる完全セット</span>
+                            </div>
+                        </div>
+                        
+                        <div class="purchase-actions">
+                            <a href="https://silva.official.ec/purchase" class="btn btn-primary btn-large btn-glow" target="_blank" rel="noopener">
+                                <span class="btn-text">今すぐ購入</span>
+                                <span class="btn-icon">🚀</span>
+                            </a>
+                            <p class="purchase-note">
+                                <span class="note-icon">📝</span>
+                                <span class="note-text">在庫状況により発送までお時間をいただく場合があります</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 枡セット Option -->
+                    <div class="purchase-option featured" data-aos="fade-up" data-aos-delay="200">
+                        <div class="option-badge">
+                            <span class="badge-icon">⭐</span>
+                            <span class="badge-text">おすすめ</span>
+                        </div>
+                        
+                        <div class="option-header">
+                            <div class="option-icon">🏺</div>
+                            <h3 class="option-title">枡セット</h3>
+                            <p class="option-subtitle">ミニ枡付き</p>
+                        </div>
+                        
+                        <div class="price-display">
+                            <span class="price-main">¥2,500</span>
+                            <span class="price-tax">（税込）</span>
+                        </div>
+                        
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">ゲームカード18枚 + ルールカード2枚</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">11種類のユニークなキャラクター</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">KUKU DAOオリジナルデザイン</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">高品質カード印刷</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">オリジナルミニ枡付き</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">特別パッケージ</span>
+                            </div>
+                        </div>
+                        
+                        <div class="purchase-actions">
+                            <a href="https://silva.official.ec/purchase-masu" class="btn btn-primary btn-large btn-glow" target="_blank" rel="noopener">
+                                <span class="btn-text">枡セットを購入</span>
+                                <span class="btn-icon">🏺</span>
+                            </a>
+                            <p class="purchase-note">
+                                <span class="note-icon">📝</span>
+                                <span class="note-text">数量限定のプレミアムセットです</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section brand">
+                    <div class="footer-logo">
+                        <h3 class="footer-title">SILVA</h3>
+                        <p class="footer-tagline">カードゲーム</p>
+                    </div>
+                    <p class="footer-description">
+                        心理戦と戦略が織りなすKUKU DAOの革新的カードゲーム。
+                        シンプルなルールながら奥深い駆け引きが楽しめます。
+                    </p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/masukei444" target="_blank" rel="noopener" aria-label="Twitter" class="social-link twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://discord.gg/kukudao" target="_blank" rel="noopener" aria-label="Discord" class="social-link discord">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">ゲーム</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">ゲームについて</a></li>
+                        <li><a href="#cards">カード一覧</a></li>
+                        <li><a href="#rules">ルール</a></li>
+                        <li><a href="#buy">購入する</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">サポート</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://discord.gg/kukudao" target="_blank" rel="noopener">Discord</a></li>
+                        <li><a href="https://twitter.com/masukei444" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://silva.official.ec/" target="_blank" rel="noopener">公式サイト</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">KUKU DAO</h4>
+                    <p class="footer-text">
+                        革新的なWeb3プロジェクトを通じて、新しいエンターテイメント体験を創造しています。
+                    </p>
+                    <div class="footer-badges">
+                        <span class="badge">Made in Japan</span>
+                        <span class="badge">Card Game</span>
+                        <span class="badge">Strategy</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>© 2024 KUKU DAO. All rights reserved.</p>
+                        <p class="sub-text">SILVAは日本発のオリジナルカードゲームです。</p>
+                    </div>
+                    <div class="footer-legal">
+                        <a href="/privacy" class="legal-link">プライバシーポリシー</a>
+                        <a href="/terms" class="legal-link">利用規約</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="ページトップへ戻る">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 14l5-5 5 5z"/>
+        </svg>
+        <span class="back-to-top-text">TOP</span>
+    </button>
+
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+        <button class="fab-main" id="fabMain" aria-label="クイックアクション">
+            <span class="fab-icon">⚡</span>
+        </button>
+        <div class="fab-menu" id="fabMenu">
+            <a href="#buy" class="fab-item fab-buy">
+                <span class="fab-icon">🛒</span>
+                <span class="fab-label">購入</span>
+            </a>
+            <a href="#cards" class="fab-item fab-cards">
+                <span class="fab-icon">🃏</span>
+                <span class="fab-label">カード</span>
+            </a>
+            <a href="https://silva.official.ec/" class="fab-item fab-community" target="_blank">
+                <span class="fab-icon">🌐</span>
+                <span class="fab-label">公式</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/components.js"></script>
+    
+    <!-- Analytics (if needed) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+</body>
+</html>
