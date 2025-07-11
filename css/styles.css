@@ -847,7 +847,7 @@ a:focus {
 .card-description p {
   margin: 0;
   font-size: var(--font-size-sm);
-  color: var(--color-text-tertiary);
+  color: var(--color-text-primary);
 }
 
 /* Floating Elements */
@@ -1469,7 +1469,7 @@ a:focus {
 }
 
 .card-description p {
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   line-height: 1.6;
   margin: 0;
   font-size: var(--font-size-sm);
@@ -3341,21 +3341,59 @@ a:focus {
   .card-description {
     font-size: var(--font-size-sm);
     line-height: 1.6;
-    color: var(--color-text-secondary);
+  }
+  
+  .card-description p {
+    color: var(--color-text-primary);
   }
   
   /* スマートフォン用モーダル */
   .modal-content {
-    width: 95%;
-    margin: 5% auto;
-    padding: var(--spacing-lg);
-    max-height: 90vh;
+    width: 96%;
+    margin: 2% auto;
+    padding: var(--spacing-md);
+    max-height: 96vh;
     overflow-y: auto;
-    border-radius: var(--border-radius-xl);
+    border-radius: var(--border-radius-lg);
   }
   
   .modal-card-display {
     grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  /* モバイル版カード画像のサイズ調整 */
+  .card-3d {
+    max-width: 200px;
+    max-height: 250px;
+  }
+  
+  /* モバイル版モーダル文字サイズ調整 */
+  .modal-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .detail-item {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .detail-label {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+  
+  .detail-value {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+  }
+  
+  .detail-description {
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+    color: var(--color-text-primary);
+  }
     gap: var(--spacing-lg);
   }
   
@@ -3473,6 +3511,62 @@ a:focus {
   
   .nav-menu {
     padding-bottom: max(var(--spacing-lg), env(safe-area-inset-bottom));
+  }
+  
+  /* スマートフォン用モーダル最適化 */
+  .modal-content {
+    width: 98%;
+    margin: 1% auto;
+    padding: var(--spacing-sm);
+    max-height: 98vh;
+    overflow-y: auto;
+  }
+  
+  .modal-header {
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+  }
+  
+  .modal-title {
+    font-size: var(--font-size-base);
+  }
+  
+  .modal-level {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs);
+  }
+  
+  .card-3d {
+    max-width: 160px;
+    max-height: 200px;
+  }
+  
+  .detail-item {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .detail-label {
+    font-size: var(--font-size-xs);
+  }
+  
+  .detail-value {
+    font-size: var(--font-size-xs);
+  }
+  
+  .detail-description {
+    font-size: var(--font-size-xs);
+    line-height: 1.4;
+  }
+  
+  .modal-actions {
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+  }
+  
+  .modal-actions .btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
+    min-height: 40px;
   }
 }
 
