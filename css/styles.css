@@ -1824,7 +1824,9 @@ a:focus {
 }
 
 .purchase-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
   justify-content: center;
   margin-bottom: var(--spacing-3xl);
 }
@@ -2866,22 +2868,30 @@ a:focus {
   }
   
   .toggle-icon {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+  
+  .toggle-text {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
   }
   
   .toggle-arrow {
     transition: transform 0.3s ease;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
   
   .cards-grid-container {
     overflow: hidden;
     transition: all 0.5s ease;
     max-height: 0;
+    opacity: 0;
   }
   
   .cards-grid-container.show {
-    max-height: none;
+    max-height: 5000px;
+    opacity: 1;
     animation: slideDown 0.5s ease-out;
   }
 
@@ -2968,11 +2978,15 @@ a:focus {
   }
   
   .purchase-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
     padding: 0 var(--spacing-md);
   }
   
   .purchase-option {
     padding: var(--spacing-lg);
+    width: 100%;
+    max-width: none;
   }
   
   .info-grid {
@@ -3095,7 +3109,7 @@ a:focus {
     transform: scale(0.98);
   }
   
-  /* カード一覧トグルボタン */
+  /* カード一覧トグルボタン - スマートフォン */
   .cards-toggle-container {
     display: flex;
     justify-content: center;
@@ -3106,18 +3120,21 @@ a:focus {
   .cards-toggle-btn {
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
-    padding: var(--spacing-lg) var(--spacing-xl);
+    justify-content: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl) var(--spacing-2xl);
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
     color: white;
     border: none;
     border-radius: var(--border-radius-xl);
-    font-size: var(--font-size-lg);
-    font-weight: 600;
+    font-size: var(--font-size-xl);
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
-    min-height: 56px;
-    box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+    min-height: 80px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 12px 32px rgba(16, 185, 129, 0.5);
   }
   
   .cards-toggle-btn:hover {
@@ -3134,22 +3151,30 @@ a:focus {
   }
   
   .toggle-icon {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+  
+  .toggle-text {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
   }
   
   .toggle-arrow {
     transition: transform 0.3s ease;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
   
   .cards-grid-container {
     overflow: hidden;
     transition: all 0.5s ease;
     max-height: 0;
+    opacity: 0;
   }
   
   .cards-grid-container.show {
-    max-height: none;
+    max-height: 5000px;
+    opacity: 1;
     animation: slideDown 0.5s ease-out;
   }
   
@@ -3262,12 +3287,29 @@ a:focus {
   }
   
   /* スマートフォン用購入セクション */
+  .purchase-container {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-lg);
+    padding: 0 var(--spacing-md);
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
   .purchase-option {
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
     border-radius: var(--border-radius-xl);
     background: rgba(26, 26, 26, 0.8);
     backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .purchase-option.featured {
+    transform: none;
+    margin-bottom: var(--spacing-lg);
   }
   
   .price-main {

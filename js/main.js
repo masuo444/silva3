@@ -316,30 +316,32 @@ function initializeCardsToggle() {
         if (isCardsVisible) {
             // Show cards
             cardsGridContainer.style.display = 'block';
-            setTimeout(() => {
-                cardsGridContainer.classList.add('show');
-            }, 10);
+            // Force reflow before adding the show class
+            cardsGridContainer.offsetHeight;
+            cardsGridContainer.classList.add('show');
             
             cardsToggleBtn.classList.add('active');
             cardsToggleBtn.querySelector('.toggle-text').textContent = 'カード一覧を閉じる';
             
-            // Scroll to cards section smoothly
+            // Scroll to cards section smoothly after animation starts
             setTimeout(() => {
                 cardsGridContainer.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
-            }, 200);
+            }, 100);
             
         } else {
             // Hide cards
             cardsGridContainer.classList.remove('show');
-            setTimeout(() => {
-                cardsGridContainer.style.display = 'none';
-            }, 500);
             
             cardsToggleBtn.classList.remove('active');
             cardsToggleBtn.querySelector('.toggle-text').textContent = 'カード一覧を見る';
+            
+            // Hide completely after animation
+            setTimeout(() => {
+                cardsGridContainer.style.display = 'none';
+            }, 500);
             
             // Scroll back to toggle button
             cardsToggleBtn.scrollIntoView({
