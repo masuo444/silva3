@@ -2734,6 +2734,10 @@ a:focus {
   }
   
   /* 改善されたヒーローセクション */
+  .hero {
+    padding-top: 100px; /* ヘッダー高さ分のパディング */
+  }
+  
   .hero-container {
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
@@ -3097,6 +3101,10 @@ a:focus {
   }
   
   /* スマートフォン用ヒーローセクション */
+  .hero {
+    padding-top: 120px; /* スマートフォン用ヘッダー高さ分のパディング */
+  }
+  
   .hero-container {
     padding: var(--spacing-md);
     gap: var(--spacing-lg);

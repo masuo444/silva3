@@ -695,12 +695,6 @@ function toggleFAB() {
 
 // Additional Event Listeners
 function addEventListeners() {
-    // Theme toggle (if implemented)
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-        themeToggle.addEventListener('click', toggleTheme);
-    }
-
     // Window resize
     window.addEventListener('resize', handleResize);
     
@@ -708,10 +702,6 @@ function addEventListeners() {
     document.addEventListener('visibilitychange', handleVisibilityChange);
 }
 
-function toggleTheme() {
-    // Theme switching functionality can be added here
-    console.log('Theme toggle clicked');
-}
 
 function handleResize() {
     // Close mobile menu on resize

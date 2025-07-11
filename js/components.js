@@ -20,7 +20,6 @@ class SilvaComponents {
         this.initializeAdvancedModal();
         this.initializeProgressBars();
         this.initializeSearchFilter();
-        this.initializeThemeSystem();
     }
 
     // Tooltip System
@@ -419,53 +418,7 @@ class SilvaComponents {
         }
     }
 
-    // Theme System
-    initializeThemeSystem() {
-        this.currentTheme = localStorage.getItem('silva-theme') || 'dark';
-        this.applyTheme(this.currentTheme);
-        
-        const themeToggle = document.getElementById('themeToggle');
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
-                this.toggleTheme();
-            });
-        }
-    }
-
-    toggleTheme() {
-        this.currentTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
-        this.applyTheme(this.currentTheme);
-        localStorage.setItem('silva-theme', this.currentTheme);
-        
-        // Show notification
-        this.showNotification(
-            `${this.currentTheme === 'dark' ? 'ダーク' : 'ライト'}テーマに切り替えました`,
-            'success',
-            3000
-        );
-    }
-
-    applyTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        
-        const themeIcon = document.querySelector('.theme-icon');
-        if (themeIcon) {
-            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-        }
-        
-        // Update CSS custom properties if needed
-        if (theme === 'light') {
-            document.documentElement.style.setProperty('--color-bg-primary', '#ffffff');
-            document.documentElement.style.setProperty('--color-bg-secondary', '#f8f9fa');
-            document.documentElement.style.setProperty('--color-text-primary', '#1a1a1a');
-            document.documentElement.style.setProperty('--color-text-secondary', '#4a5568');
-        } else {
-            document.documentElement.style.setProperty('--color-bg-primary', '#0a0a0a');
-            document.documentElement.style.setProperty('--color-bg-secondary', '#111111');
-            document.documentElement.style.setProperty('--color-text-primary', '#ffffff');
-            document.documentElement.style.setProperty('--color-text-secondary', '#cccccc');
-        }
-    }
+    // テーマシステムは削除されました
 
     // Performance Monitor
     initializePerformanceMonitor() {
