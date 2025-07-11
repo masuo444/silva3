@@ -169,13 +169,27 @@ function initializeApp() {
     initializeTilt();
     initializeFAB();
     
-    // Ensure cards are rendered on page load
+    // PC版では初期からカードを表示、モバイル版のみトグル機能
+    initializeResponsiveCards();
+    
+    // Add event listeners
+    addEventListeners();
+}
+
+// レスポンシブカード表示の初期化
+function initializeResponsiveCards() {
+    const cardsGridContainer = document.getElementById('cardsGridContainer');
+    const isMobile = window.innerWidth <= 768;
+    
     if (cardsGrid && SILVA_CARDS) {
         renderCards();
     }
     
-    // Add event listeners
-    addEventListeners();
+    if (!isMobile && cardsGridContainer) {
+        // PC版では常にカードを表示
+        cardsGridContainer.style.display = 'block';
+        cardsGridContainer.classList.add('show');
+    }
 }
 
 // Navigation
@@ -307,7 +321,7 @@ function initializeCards() {
     initializeCardFilters();
 }
 
-// Cards Toggle System
+// Cards Toggle System (モバイル版のみ)
 function initializeCardsToggle() {
     const cardsToggleBtn = document.getElementById('cardsToggleBtn');
     const cardsGridContainer = document.getElementById('cardsGridContainer');
@@ -316,6 +330,9 @@ function initializeCardsToggle() {
     if (!cardsToggleBtn || !cardsGridContainer) return;
 
     cardsToggleBtn.addEventListener('click', function() {
+        // モバイル版のみトグル機能を有効にする
+        const isMobile = window.innerWidth <= 768;
+        if (!isMobile) return;
         isCardsVisible = !isCardsVisible;
         
         if (isCardsVisible) {
@@ -701,6 +718,9 @@ function handleResize() {
     if (window.innerWidth > 768 && isMenuOpen) {
         toggleMobileMenu();
     }
+    
+    // レスポンシブカード表示の再初期化
+    initializeResponsiveCards();
 }
 
 function handleVisibilityChange() {

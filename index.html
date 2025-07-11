@@ -306,8 +306,8 @@
                     </p>
                 </div>
                 
-                <!-- カード一覧表示ボタン -->
-                <div class="cards-toggle-container">
+                <!-- カード一覧表示ボタン（モバイル版のみ表示） -->
+                <div class="cards-toggle-container mobile-only">
                     <button id="cardsToggleBtn" class="cards-toggle-btn">
                         <span class="toggle-icon">🃏</span>
                         <span class="toggle-text">カード一覧を見る</span>
@@ -315,8 +315,9 @@
                     </button>
                 </div>
                 
-                <div class="cards-grid-container" id="cardsGridContainer" style="display: none;">
-                    <div class="cards-scroll-hint">
+                <!-- カードグリッド（PC版は常時表示、モバイル版はトグル） -->
+                <div class="cards-grid-container desktop-visible" id="cardsGridContainer">
+                    <div class="cards-scroll-hint mobile-only">
                         <p>← スワイプして全てのカードを見る →</p>
                     </div>
                     <div class="cards-grid" id="cardsGrid">
