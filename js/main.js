@@ -169,6 +169,11 @@ function initializeApp() {
     initializeTilt();
     initializeFAB();
     
+    // Ensure cards are rendered on page load
+    if (cardsGrid && SILVA_CARDS) {
+        renderCards();
+    }
+    
     // Add event listeners
     addEventListeners();
 }
@@ -316,6 +321,9 @@ function initializeCardsToggle() {
         if (isCardsVisible) {
             // Show cards
             cardsGridContainer.style.display = 'block';
+            cardsGridContainer.style.maxHeight = 'none';
+            cardsGridContainer.style.overflow = 'visible';
+            
             // Force reflow before adding the show class
             cardsGridContainer.offsetHeight;
             cardsGridContainer.classList.add('show');
@@ -323,13 +331,19 @@ function initializeCardsToggle() {
             cardsToggleBtn.classList.add('active');
             cardsToggleBtn.querySelector('.toggle-text').textContent = 'カード一覧を閉じる';
             
-            // Scroll to cards section smoothly after animation starts
+            // Ensure all cards are rendered and force re-render
+            setTimeout(() => {
+                renderCards();
+                console.log('Cards rendered:', cardsGrid.children.length);
+            }, 50);
+            
+            // Scroll to cards section smoothly after cards are rendered
             setTimeout(() => {
                 cardsGridContainer.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
-            }, 100);
+            }, 200);
             
         } else {
             // Hide cards
@@ -341,7 +355,9 @@ function initializeCardsToggle() {
             // Hide completely after animation
             setTimeout(() => {
                 cardsGridContainer.style.display = 'none';
-            }, 500);
+                cardsGridContainer.style.maxHeight = '0';
+                cardsGridContainer.style.overflow = 'hidden';
+            }, 600);
             
             // Scroll back to toggle button
             cardsToggleBtn.scrollIntoView({

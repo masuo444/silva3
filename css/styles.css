@@ -2884,15 +2884,16 @@ a:focus {
   
   .cards-grid-container {
     overflow: hidden;
-    transition: all 0.5s ease;
+    transition: all 0.6s ease;
     max-height: 0;
     opacity: 0;
   }
   
   .cards-grid-container.show {
-    max-height: 5000px;
+    max-height: none;
     opacity: 1;
-    animation: slideDown 0.5s ease-out;
+    overflow: visible;
+    animation: slideDown 0.6s ease-out;
   }
 
   /* 改善されたカードグリッド - タブレット */
@@ -3167,15 +3168,16 @@ a:focus {
   
   .cards-grid-container {
     overflow: hidden;
-    transition: all 0.5s ease;
+    transition: all 0.6s ease;
     max-height: 0;
     opacity: 0;
   }
   
   .cards-grid-container.show {
-    max-height: 5000px;
+    max-height: none;
     opacity: 1;
-    animation: slideDown 0.5s ease-out;
+    overflow: visible;
+    animation: slideDown 0.6s ease-out;
   }
   
   @keyframes slideDown {
@@ -3194,6 +3196,8 @@ a:focus {
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
     padding: var(--spacing-lg) var(--spacing-md);
+    width: 100%;
+    min-height: auto;
   }
   
   /* Reset card positioning on mobile - single column */
@@ -3210,6 +3214,10 @@ a:focus {
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-xl);
     transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
   }
   
   .game-card:hover {
